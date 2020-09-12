@@ -5,25 +5,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Hvad er mine chancer?</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css"/>
+        <script src="https://vitusverden.github.io/vitusresources/script.js"></script> <!--Vitus's navbar & dark theme osv-->
     </head>
     <body>
-        <input type="number" placeholder="sider" id="sider" value="10"> 
         <input type="number" placeholder="mindst" id="mindst">
         <h class="h1">Hvad er mine chancer?</h1>
         <br>
         <p>Klik her for at finde ud af det</p>
         <br>
-        <input type="button" value="Chancer?" class="button" onclick="getChance(document.getElementById('sider').value, document.getElementById('mindst').value)">
+        <input type="button" value="Chancer?" class="button" onclick="getChance(10, document.getElementById('mindst').value)">
         <p id="chance">
         </p>
         
-        <footer class="footer">
-            <p>Diverse links</p>
-            <a href="https://vprollespil.weebly.com">VPRollespil</a>
-            <br>
-            <a href="https://vitusverden.github.io/defirestoerste">De fire største siden(ikke oppe at køre)</a>
-        </footer>
         <script src="main.js"></script>
     </body>
 </html>
