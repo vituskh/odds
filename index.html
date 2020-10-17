@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="da-dk" class="has-text-centered">
+<html lang="da-dk">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +8,17 @@
         <script src="https://vitusverden.github.io/vitusresources/script.js"></script> <!--Vitus's navbar & dark theme osv-->
     </head>
     <body>
-        <input type="number" placeholder="mindst" id="mindst">
-        <h class="h1">Hvad er mine chancer?</h1>
-        <br>
-        <p>Klik her for at finde ud af det</p>
-        <br>
-        <input type="button" value="Chancer?" class="button" onclick="getChance(10, document.getElementById('mindst').value)">
-        <p id="chance">
-        </p>
+        <div class="has-text-centered">
+            <input type="number" placeholder="mindst" id="mindst">
+            <h class="h1">Hvad er mine chancer?</h1>
+            <br>
+            <p>Klik her for at finde ud af det</p>
+            <br>
+            <input type="button" value="Chancer?" class="button" onclick="getChance(10, document.getElementById('mindst').value)">
+            <p id="chance">
+            </p>
+        </div>
+        
         
         <script src="main.js"></script>
     </body>
