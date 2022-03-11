@@ -1,25 +1,43 @@
-﻿<!DOCTYPE html>
-<html lang="da-dk">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Hvad er mine chancer?</title>
-        <script src="https://vitusverden.github.io/vitusresources/script.js"></script> <!--Vitus's navbar & dark theme osv-->
-    </head>
-    <body>
-        <div class="has-text-centered">
-            <input type="number" placeholder="mindst" id="mindst">
-            <h class="h1">Hvad er mine chancer?</h1>
-            <br>
-            <p>Klik her for at finde ud af det</p>
-            <br>
-            <input type="button" value="Chancer?" class="button" onclick="getChance(10, document.getElementById('mindst').value)">
-            <p id="chance">
-            </p>
-        </div>
-        
-        
-        <script src="main.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udregn sandsyneligheder på magikast</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="chaos.js"></script>
+    <script src="../vitusresources/script.js"></script>
+    <!--<script src="tests.js"></script>-->
+</head>
+
+<body>
+
+    <noscript style="width: 100vw; position: absolute; height: 100vh; background-color: white;">Du skal bruge JavaScript på denne hjemmeside!</noscript>
+
+    <label for="castnumber">Casting Number: </label>
+    <input type="number" name="casting number" id="castNumber">
+    <br><br>
+
+    <label for="showAllCheckbox">Vis alle terningekast-muligheder?</label>
+    <input checked type="checkbox" name="show all" id="showAllCheckbox" onchange="showAllUpdate(this.checked)">
+    <br>
+    <div id="diceDiv" hidden>
+        <label for="castDice">Terninger: </label>
+        <input disabled type="number" name="terninger" id="castDice">
+    </div>
+    <br><br>
+
+    <button onclick="console.log(documentCalculate())">Udregn!</button><br>
+
+    <div id="outputs">
+        <p name="Output" class="column" id="difficultyOutput">Chance for at klare det</p>
+        <p name="Output" class="column" id="failOutput">Risiko for at lave fejl</>
+    </div>
+
+    <!--
+    Insanity points & Tzeentch's Curse:
+    <img src="https://drive.google.com/file/d/1lKjdGXDGCjCKwQUkKUkNbFk8GY5zY_Oj/view">-->
+</body>
+
 </html>
